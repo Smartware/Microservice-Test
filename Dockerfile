@@ -7,7 +7,7 @@ EXPOSE 443
 EXPOSE 80
 
 # copy project csproj file and restore it in docker directory
-COPY ./*.csproj ./
+COPY ./*ProductMicroservice.csproj ./
 RUN dotnet restore
 
 # Copy everything into the docker directory and build
@@ -29,7 +29,7 @@ EXPOSE 443
 EXPOSE 80
 
 # copy project csproj file and restore it in docker directory
-COPY ./*.csproj ./
+COPY ./*UserMicroservice.csproj./
 RUN dotnet restore
 
 # Copy everything into the docker directory and build
