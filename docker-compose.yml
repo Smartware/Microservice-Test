@@ -4,7 +4,7 @@ services:
    image: ${DOCKER_REGISTRY-}producstmicroservice:v1
    build:
     context: .
-    dockerfile: Microservice/ProductMicroservice/Dockerfile
+    Dockerfile: Microservice/ProductMicroservice/Dockerfile
    environment:
     - CONNECTIONSTRINGS__DEFAULTCONNECTION=Server=tcp:smartware.database.windows.net,1433;Initial Catalog=walure-erp-test;Persist Security Info=False;User ID=sysadmin;Password=micr0s0ft_;MultipleActiveResultSets=True;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
    ports:
@@ -13,7 +13,7 @@ services:
    image: ${DOCKER_REGISTRY-}usersmicroservice:v1
    build:
     context: .
-    dockerfile: Microservice/UserMicroservice/Dockerfile
+    Dockerfile: Microservice/UserMicroservice/Dockerfile
    environment:
     - CONNECTIONSTRINGS__DEFAULTCONNECTION=Server=tcp:smartware.database.windows.net,1433;Initial Catalog=walure-erp-test;Persist Security Info=False;User ID=sysadmin;Password=micr0s0ft_;MultipleActiveResultSets=True;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
     - "4202:80"
