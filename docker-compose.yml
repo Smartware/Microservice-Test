@@ -1,7 +1,7 @@
 version: '3.5'
 services:
   ProductService:
-   image: ${DOCKER_REGISTRY-}producstmicroservice:v1
+   image: $producstmicroservice:v1
    build:
     context: ./ProductMicroservice
     dockerfile: Dockerfile
@@ -10,7 +10,7 @@ services:
    ports:
     - "4201:80"
   UserService:
-   image: ${DOCKER_REGISTRY-}usersmicroservice:v1
+   image: usersmicroservice:v1
    build:
     context: ./UserMicroservice
     dockerfile: Dockerfile
